@@ -1,0 +1,39 @@
+
+
+<div class="container mt-4">
+  <h2>Buscar Pessoa por CPF</h2>
+  <div class="form-group">
+    <label for="cpf">CPF:</label>
+    <input type="text" class="form-control" id="cpf" [(ngModel)]="cpf">
+  </div>
+
+  <button class="button" (click)="buscarPorCpf(cpf)">Buscar</button>
+
+  <div *ngIf="pessoa" class="mt-4">
+    <h3 class="mb-3">Dados da Pessoa</h3>
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text"><strong>Nome:</strong> {{ pessoa.nome }}</p>
+        <p class="card-text"><strong>CPF:</strong> {{ pessoa.cpf }}</p>
+        <p class="card-text"><strong>Sexo:</strong> {{ pessoa.sexo }}</p>
+        <p class="card-text"><strong>Email:</strong> {{ pessoa.email }}</p>
+        <p class="card-text"><strong>Celular:</strong> {{ pessoa.celular }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="message" *ngIf="messagesService.message || messagesService.cpfNotFound">
+    <div class="message-header">
+      <h2>Mensagem do Sistema:</h2>
+      <button class="clear" (click)="messagesService.clear()">
+        <fa-icon [icon]="faTimes"></fa-icon>
+      </button>
+    </div>
+    <p *ngIf="messagesService.message || messagesService.cpfNotFound">{{ messagesService.message || messagesService.cpfNotFound }}</p>
+  </div>
+
+  <div *ngIf="erro">
+    <p class="text-danger">{{ erro }}</p>
+  </div>
+</div>
+

@@ -1,0 +1,93 @@
+.button {
+  color: #fff;
+  background-color: #ff6200;
+  border: 2px solid transparent;
+  padding: 0.6em 1em;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.button:hover{
+  color: #f59153;
+  border-color: #f59153;
+  background-color: transparent;
+}
+
+.message {
+  position: fixed;
+  top: 3em;
+  width: 50%;
+  margin-left: 50%;
+  left: -25%;
+  z-index: 10;
+  background-color: #fff;
+  border: 3px solid #ff6200;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.message-header button {
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.message p {
+  font-size: 1.2em;
+}
+
+/* FORM */
+.container {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.form-container label {
+  font-weight: bold;
+  font-size: .9em;
+  margin-bottom: .4em;
+}
+
+.form-container input,
+.form-container textarea {
+  padding:  .6em;
+  color: #777;
+  font-size: 0.8em;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .message {
+    width: 80%;
+    left: 10%;
+  }
+}

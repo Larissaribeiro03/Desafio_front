@@ -1,0 +1,39 @@
+button[type="submit"]{
+  color: #fff;
+  background-color: #ff6200;
+  border: 2px solid transparent;
+  padding: 0.6em 1em;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+button[type="submit"]:hover{
+  color: #f59153;
+  border-color: #f59153;
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  form {
+    padding: 1em;
+    max-width: none;
+  }
+
+  .form-group label {
+    font-size: 0.8em;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 0.9em;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
